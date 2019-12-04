@@ -1,3 +1,9 @@
+# Projects from demo
+
+- [npm-talk-standard-version](../npm-talk-standard-version)
+- [npm-talk-lerna](../npm-talk-lerna)
+- [npm-talk-app](../npm-talk-app)
+
 # Verdaccio
 
 ## Description
