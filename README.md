@@ -1,8 +1,8 @@
 # Projects from demo
 
-- [npm-talk-standard-version](../npm-talk-standard-version)
-- [npm-talk-lerna](../npm-talk-lerna)
-- [npm-talk-app](../npm-talk-app)
+- [npm-talk-react-hooks](https://github.com/jrhart08/npm-talk-react-hooks)
+- [npm-talk-lerna](https://github.com/jrhart08/npm-talk-lerna)
+- [npm-talk-app](https://github.com/jrhart08/npm-talk-app)
 
 # Verdaccio
 
