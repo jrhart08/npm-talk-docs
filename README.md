@@ -1,8 +1,12 @@
 # Projects from demo
 
+- [npm-talk-utils](https://github.com/jrhart08/npm-talk-utils)
 - [npm-talk-react-hooks](https://github.com/jrhart08/npm-talk-react-hooks)
 - [npm-talk-lerna](https://github.com/jrhart08/npm-talk-lerna)
 - [npm-talk-app](https://github.com/jrhart08/npm-talk-app)
+
+Each of these projects (except the app) uses a different package publishing scheme.
+View each one for more detailed documentation.
 
 # Verdaccio
 
@@ -51,89 +55,4 @@ In `~/path/to/your-package/package.json`
 {
   "name": "@jrh/your-project"
 }
-```
-
-# `standard-version`
-
-## Description
-
-`standard-version` automates version and CHANGELOG  by looking at git commit messages.
-
-  - For instance, if any commit message since its last release starts with `feat:`, it will do a minor version bump (e.g. `v1.2.3 -> v1.3.0`).
-
-More detailed docs [here](https://www.npmjs.com/package/standard-version).
-
-## Usage
-From `~/path/to/your-project/`
-
-```bash
-npm i -D standard-version
-```
-
-In `~/path/to/your-project/package.json`
-
-```json
-{
-  "scripts": {
-    "release": "standard-version"
-  }
-}
-```
-
-From `~/path/to/your-project/`
-
-```bash
-npm run release
-```
-
-That's it!
-  - It works by (git) tagging releases.
-  - When you run it, it looks at all commits since the last tagged release.
-
-**NOTE:** This can be part of your CI pipeline! Our team's CI script runs `npm run release` (just like this) after each merge into `master`
-
-# Lerna
-
-## Description
-
-Popular tool for managing multiple npm packages in 1 git repo.
-
-Used in projects like Babel, React, Angular, and Storybook.
-
-Read more here:
-  - https://lerna.js.org/
-  - https://github.com/lerna/lerna
-
-## Usage
-
-In `~/path/to/your-project/` (If starting from scratch)
-
-```bash
-# Will initialize the following files/folders:
-# lerna.json
-# package.json
-# packages/
-npx lerna init
-```
-
-Add to `~/path/to/your-project/.npmrc` (if applicable)
-
-```
-@jrh:registry=http://localhost:4873
-//localhost:4873/:_authToken="{the token found in $HOME/.npmrc}"
-```
-
-Create a package
-
-```bash
-# `-y` skips all those `npm init` prompts for name, version, description, etc
-# version will default to the version in lerna.json
-npx lerna create @jrh/my-first-lerna-package -y
-```
-
-**IMPORTANT:** Run this whenever you add a reference from one package to another.
-
-```bash
-# npm-links each package under `packages/` together
-npx lerna bootstrap
 ```
