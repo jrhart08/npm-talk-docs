@@ -1,9 +1,13 @@
 # Projects from demo
 
-- [npm-talk-utils](https://github.com/jrhart08/npm-talk-utils)
-- [npm-talk-react-hooks](https://github.com/jrhart08/npm-talk-react-hooks)
-- [npm-talk-lerna](https://github.com/jrhart08/npm-talk-lerna)
+Demo application
 - [npm-talk-app](https://github.com/jrhart08/npm-talk-app)
+
+Demo packages
+- [npm-talk-utils](https://github.com/jrhart08/npm-talk-utils) (vanilla npm versioning)
+- [npm-talk-react-hooks](https://github.com/jrhart08/npm-talk-react-hooks) (using `standard-version`)
+- [npm-talk-lerna](https://github.com/jrhart08/npm-talk-lerna) (using `lerna`)
+
 
 Each of these projects (except the app) uses a different package publishing scheme.
 View each one for more detailed documentation.
